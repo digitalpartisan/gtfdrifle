@@ -4,4 +4,6 @@ The Mighty Sniper Rifle of GTFD, while not hostile, does deal one damage because
 
 The rifle and holotape both weigh nothing and cannot be dropped by accident.  While uninstalling mods is not officially supported by Fallout 4, the holotape includes an option to prepare for removing the plugin.  Follow all directions the holotape provides when using this feature.
 
+GTFD requires AWKCR (https://www.nexusmods.com/fallout4/mods/6091/?) and is VIS-compatible (https://www.nexusmods.com/fallout4/mods/3877/?) because you should already have these mods installed as part of de-consolifying the UI with DEF_UI (https://www.nexusmods.com/fallout4/mods/10654/?).  GTFD bundles Vault 111 Exit Detector (https://www.nexusmods.com/fallout4/mods/21858/?) and Holotape Retainer (https://www.nexusmods.com/fallout4/mods/21860/?) so that you do not need to install them separately.
+
 Enjoy.
