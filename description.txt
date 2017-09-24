@@ -1,0 +1,7 @@
+Are you sick of your companions, settlers, brahmin, or even visiting traders and their brahmin getting stuck on roofs?  Of course you are!  Don't you wish you could make them get the fudge down?  Sure you do!  The Mighty Sniper Rifle of GTFD will solve your problem.  Just point and shoot from the location you would prefer the badly-behaved NPC be located!
+
+The Mighty Sniper Rifle of GTFD, while not hostile, does deal one damage because a weapon dealing zero damage failed to properly trigger the intended effect.  The rifle will work on any non-hostile actor you care to GTFD.  The rifle itself, some ammunition, and an associated holotape will be added to your inventory either when you load the mod for the first time or after you exit Vault 111.  Additional ammunition can be acquired from the holotape.
+
+The rifle and holotape both weigh nothing and cannot be dropped by accident.  While uninstalling mods is not officially supported by Fallout 4, the holotape includes an option to prepare for removing the plugin.  Follow all directions the holotape provides when using this feature.
+
+Enjoy.
