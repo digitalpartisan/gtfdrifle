@@ -1,2 +1,9 @@
+v1.1.0
+Integrated Chronicle v1.0.0
+Introduced AWKCR requirement so that the GTFD weapons have correct keywords
+Renamed holotape to "[Settings] Get the Fudge Down" for VIS-compatability
+Added the ability to swap out GTFD weapons
+Adjusted how GTFD ammo is handled
+
 v1.0.0
 Initial release

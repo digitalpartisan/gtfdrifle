@@ -1,6 +1,11 @@
 [
-	"Data\\SCRIPTS\\GTFD\\Fragments\\Terminals\\Main.pex",
-	"Data\\SCRIPTS\\GTFD\\Fragments\\Terminals\\Uninstall.pex",
-	"Data\\SCRIPTS\\GTFD\\Effect.pex",
-	"Data\\SCRIPTS\\GTFD\\MasterQuest.pex"
+	"Data\\Scripts\\GTFD\\CoreCustomizations.pex",
+	"Data\\Scripts\\GTFD\\Effect.pex",
+	"Data\\Scripts\\GTFD\\EngineDetails.pex",
+	"Data\\Scripts\\GTFD\\Fragments\\Terminals\\Main.pex",
+	"Data\\Scripts\\GTFD\\Fragments\\Terminals\\Uninstall.pex",
+	"Data\\Scripts\\GTFD\\Fragments\\Terminals\\WeaponSwap.pex",
+	"Data\\Scripts\\GTFD\\MasterQuest.pex",
+	"Data\\Scripts\\GTFD\\WeaponBuilder.pex",
+	"Data\\Scripts\\GTFD\\WeaponManager.pex"
 ]

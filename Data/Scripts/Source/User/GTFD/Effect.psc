@@ -8,6 +8,4 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 		akTarget.AddSpell(TeleportInSpell)
 		akTarget.MoveTo(aPlayer)
 	endif
-
-	Dispel()
 EndEvent
