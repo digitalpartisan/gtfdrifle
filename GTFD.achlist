@@ -6,6 +6,7 @@
 	"Data\\Scripts\\GTFD\\Fragments\\Terminals\\Uninstall.pex",
 	"Data\\Scripts\\GTFD\\Fragments\\Terminals\\WeaponSwap.pex",
 	"Data\\Scripts\\GTFD\\MasterQuest.pex",
+	"Data\\Scripts\\GTFD\\PlayerAliasRepair.pex",
 	"Data\\Scripts\\GTFD\\WeaponBuilder.pex",
 	"Data\\Scripts\\GTFD\\WeaponManager.pex"
 ]
