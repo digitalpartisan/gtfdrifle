@@ -1,3 +1,7 @@
+v1.3.0
+Integrated Loggout v1.1.0
+Integrated Chronicle v1.1.0
+
 v1.2.1
 Fixed a typo in the holotape record's name
 Fixed a bug that left the holotape operational after GTFD has been uninstalled
