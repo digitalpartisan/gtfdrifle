@@ -1,4 +1,0 @@
-Loggout v1.1.0
-Vault 111 Exit Detector v1.0.1
-Holotape Retainer v1.1.0
-Chronicle v1.1.0
