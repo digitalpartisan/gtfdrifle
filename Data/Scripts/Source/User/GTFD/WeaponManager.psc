@@ -1,82 +1,58 @@
 Scriptname GTFD:WeaponManager extends Quest
 
 ReferenceAlias Property WeaponAlias Auto Const Mandatory
-GTFD:WeaponBuilder Property DefaultWeapon Auto Const Mandatory
-Int Property AddAmmoAmount = 9999 Auto Const
+
+Group WeaponOptions
+	GTFD:WeaponBuilder Property GTFD_Weapon_Sniper Auto Const Mandatory
+	GTFD:WeaponBuilder Property GTFD_Weapon_Gauss Auto Const Mandatory
+	GTFD:WeaponBuilder Property GTFD_Weapon_Submachine Auto Const Mandatory
+	GTFD:WeaponBuilder Property GTFD_Weapon_Deliverer Auto Const Mandatory
+	GTFD:WeaponBuilder Property GTFD_Weapon_AlienBlaster Auto Const Mandatory
+EndGroup
 
 ObjectReference Function getReference()
 	return WeaponAlias.GetReference()
 EndFunction
 
-Form Function getBaseObject()
-	ObjectReference weaponRef = getReference()
-	if (!weaponRef)
-		return None
-	endif
-
-	return weaponRef.GetBaseObject()
-EndFunction
-
-Ammo Function getWeaponAmmo()
-	Weapon wForm = getBaseObject() as Weapon
-	if (!wForm)
-		return None
-	endif
-
-	return wForm.GetAmmo()
-EndFunction
-
-Function takeAmmo()
-	Ammo aForm = getWeaponAmmo()
-	if (aForm)
-		Game.GetPlayer().RemoveItem(aForm, -1, true)
-	endif
-EndFunction
-
-Function addAmmo()
-	Ammo aForm = getWeaponAmmo()
-	if (aForm)
-		takeAmmo() ; so this script doesn't infinitely add this ammo
-		Game.GetPlayer().AddItem(aForm, AddAmmoAmount, true)
-	endif
-EndFunction
-
 Function takeWeapon()
 	ObjectReference weaponRef = getReference()
 	if (weaponRef)
-		takeAmmo()
 		WeaponAlias.TryToClear()
 		Game.GetPlayer().RemoveItem(weaponRef)
 	endif
 EndFunction
 
 Function setWeapon(GTFD:WeaponBuilder newWeapon)
-	Actor aPlayer = Game.GetPlayer()
-	takeWeapon()
-
-	ObjectReference newWeaponRef = newWeapon.getReference()
-
-	WeaponAlias.ForceRefTo(newWeaponRef)
-	Game.GetPlayer().AddItem(newWeaponRef)
-	aPlayer.AddItem(getWeaponAmmo(), AddAmmoAmount, true)
-EndFunction
-
-Function setDefaultWeapon()
-	setWeapon(DefaultWeapon)
-EndFunction
-
-Event Actor.OnItemEquipped(Actor akSender, Form akBaseObject, ObjectReference akReference)
-	if (Game.GetPlayer() == akSender && getReference() == akReference)
-		addAmmo()
+	if (!newWeapon)
+		Debug.MessageBox("BUSTED!")
+		return
 	endif
-EndEvent
+
+	takeWeapon()
+	WeaponAlias.ForceRefTo(newWeapon.getReference())
+	Game.GetPlayer().AddItem(getReference())
+EndFunction
+
+Function useSniper()
+	setWeapon(GTFD_Weapon_Sniper)
+EndFunction
+
+Function useGauss()
+	setWeapon(GTFD_Weapon_Gauss)
+EndFunction
+
+Function useSubmachine()
+	setWeapon(GTFD_Weapon_Submachine)
+EndFunction
+
+Function useDeliverer()
+	setWeapon(GTFD_Weapon_Deliverer)
+EndFunction
 
 Event OnQuestInit()
-	setDefaultWeapon()
-	RegisterForRemoteEvent(Game.GetPlayer(), "OnItemEquipped")
+	useSniper()
 EndEvent
 
 Event OnQuestShutdown()
 	takeWeapon()
-	UnregisterForRemoteEvent(Game.GetPlayer(), "OnItemEquipped")
 EndEvent

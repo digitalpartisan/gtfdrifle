@@ -1,6 +1,6 @@
 Scriptname GTFD:CoreCustomizations extends Chronicle:Package:CustomBehavior
 
-Vault111ExitDetector Property GTFD_Vault111ExitDetector Auto Const Mandatory
+Jiffy:Vault111ExitDetector Property GTFD_Vault111ExitDetector Auto Const Mandatory
 GTFD:MasterQuest Property GTFD_MasterQuest Auto Const Mandatory
 GTFD:WeaponManager Property GTFD_WeaponManager Auto Const Mandatory
 

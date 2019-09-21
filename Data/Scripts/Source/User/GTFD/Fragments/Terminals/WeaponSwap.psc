@@ -4,7 +4,7 @@ Scriptname GTFD:Fragments:Terminals:WeaponSwap Extends Terminal Hidden Const
 ;BEGIN FRAGMENT Fragment_Terminal_01
 Function Fragment_Terminal_01(ObjectReference akTerminalRef)
 ;BEGIN CODE
-GTFD_WeaponManager.setWeapon(GTFD_Weapon_Sniper)
+GTFD_WeaponManager.useSniper()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -12,7 +12,7 @@ EndFunction
 ;BEGIN FRAGMENT Fragment_Terminal_02
 Function Fragment_Terminal_02(ObjectReference akTerminalRef)
 ;BEGIN CODE
-GTFD_WeaponManager.setWeapon(GTFD_Weapon_Gauss)
+GTFD_WeaponManager.useGauss()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -20,7 +20,7 @@ EndFunction
 ;BEGIN FRAGMENT Fragment_Terminal_03
 Function Fragment_Terminal_03(ObjectReference akTerminalRef)
 ;BEGIN CODE
-GTFD_WeaponManager.setWeapon(GTFD_Weapon_Submachine)
+GTFD_WeaponManager.useSubmachine()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -28,15 +28,7 @@ EndFunction
 ;BEGIN FRAGMENT Fragment_Terminal_05
 Function Fragment_Terminal_05(ObjectReference akTerminalRef)
 ;BEGIN CODE
-GTFD_WeaponManager.setWeapon(GTFD_Weapon_Deliverer)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_Terminal_06
-Function Fragment_Terminal_06(ObjectReference akTerminalRef)
-;BEGIN CODE
-GTFD_WeaponManager.setWeapon(GTFD_Weapon_AlienBlaster)
+GTFD_WeaponManager.useDeliverer()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -44,13 +36,3 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 GTFD:WeaponManager Property GTFD_WeaponManager Auto Const
-
-GTFD:WeaponBuilder Property GTFD_Weapon_Sniper Auto Const
-
-GTFD:WeaponBuilder Property GTFD_Weapon_Gauss Auto Const
-
-GTFD:WeaponBuilder Property GTFD_Weapon_Submachine Auto Const
-
-GTFD:WeaponBuilder Property GTFD_Weapon_Deliverer Auto Const
-
-GTFD:WeaponBuilder Property GTFD_Weapon_AlienBlaster Auto Const
