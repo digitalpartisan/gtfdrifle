@@ -1,5 +1,7 @@
 v1.4.0
 Switched to Jiffy to simplify library dependencies
+Removed alien blaster option due to game crashes it sometimes causes
+Switched to ESL plugin
 
 v1.3.0
 Integrated Loggout v1.1.0
