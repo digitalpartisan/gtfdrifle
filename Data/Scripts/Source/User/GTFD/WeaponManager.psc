@@ -17,8 +17,8 @@ EndFunction
 Function takeWeapon()
 	ObjectReference weaponRef = getReference()
 	if (weaponRef)
+		Game.GetPlayer().RemoveItem(weaponRef, 1, weaponRef)
 		WeaponAlias.TryToClear()
-		Game.GetPlayer().RemoveItem(weaponRef)
 	endif
 EndFunction
 
@@ -53,6 +53,7 @@ Event OnQuestInit()
 	useSniper()
 EndEvent
 
-Event OnQuestShutdown()
+Function Stop()
 	takeWeapon()
-EndEvent
+	parent.Stop()
+EndFunction
