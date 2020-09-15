@@ -1,2 +1,0 @@
-SCAFFOLD_MOD="GTFDRifle"
-SCAFFOLD_GAME="fallout4"
